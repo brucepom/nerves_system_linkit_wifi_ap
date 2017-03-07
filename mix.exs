@@ -1,4 +1,4 @@
-defmodule NervesSystemLinkit.Mixfile do
+defmodule NervesSystemLinkitWifiAp.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -6,7 +6,7 @@ defmodule NervesSystemLinkit.Mixfile do
     |> String.strip
 
   def project do
-    [app: :nerves_system_linkit,
+    [app: :nerves_system_linkit_wifi_ap,
      version: @version,
      elixir: "~> 1.2",
      compilers: Mix.compilers ++ [:nerves_package],
@@ -28,17 +28,17 @@ defmodule NervesSystemLinkit.Mixfile do
 
   defp description do
     """
-    Nerves System - LinkIt Smart
+    Nerves System - LinkIt Smart with WIFI AP Mode
     """
   end
 
   defp package do
-    [maintainers: ["Frank Hunleth", "Justin Schneck"],
+    [maintainers: ["Bruce Pomeroy"],
      files: ["rootfs-additions", "LICENSE", "mix.exs", "nerves_defconfig",
        "nerves.exs", "README.md", "VERSION", "rootfs-additions", "Config.in",
        "external.mk", "package", "post-createfs.sh", "fwup.conf", "linux-4.4",
        "busybox.config", "linux-backports.defconfig"],
      licenses: ["Apache 2.0"],
-     links: %{"Github" => "https://github.com/nerves-project/nerves_system_linkit"}]
+     links: %{"Github" => "https://github.com/brucepom/nerves_system_linkit_wifi_ap"}]
   end
 end
